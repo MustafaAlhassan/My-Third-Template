@@ -2,14 +2,6 @@
 let ourSkills = document.querySelector(".our-skills");
 let progressSpan = document.querySelectorAll(".progress span");
 
-window.onscroll = function () {
-  if (window.scrollY > ourSkills.offsetTop + 50) {
-    progressSpan.forEach((span) => {
-      span.style.width = span.dataset.width;
-    });
-  }
-};
-
 // To Count the date down of Events Section
 let eventDate = new Date("Jul 1, 2030 23:59:59").getTime();
 let countDown = setInterval(() => {
@@ -46,6 +38,11 @@ function increaseNum(number) {
 }
 
 window.onscroll = function () {
+  if (window.scrollY > ourSkills.offsetTop + 50) {
+    progressSpan.forEach((span) => {
+      span.style.width = span.dataset.width;
+    });
+  }
   if (window.scrollY > stats.offsetTop - 150) {
     if (!started) {
       numbers.forEach((number) => increaseNum(number));
