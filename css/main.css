@@ -892,6 +892,11 @@ header .mega-menu .links li a i {
   height: 100%;
   left: 0;
   background-color: var(--main-color);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 /* End Our Skills */
 /* Start How It Works */
